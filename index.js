@@ -1,3 +1,4 @@
+//importing required files
 const inquirer = require('inquirer');
 const fs = require("fs");
 const Manager = require("./lib/Manager.js");
@@ -8,10 +9,13 @@ const OUTPUT_DIR = path.resolve(__dirname, "dist");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const generateTeam = require("./src/template.js");
 
+//empty teamArray to push required members
 teamArray = [];
 
+//function for the entire application
 function runApp () {
 
+  //inquirer prompt which collects required team members and runs specific function based on user input
   function createTeam () {
     inquirer.
     prompt([
@@ -40,6 +44,7 @@ function runApp () {
     })
   }
 
+//prompts to collect required details about manager
 function addManager() {
   inquirer.prompt ([
     
@@ -75,7 +80,7 @@ function addManager() {
 
 }
 
-
+//prompts to collect required details about engineer
 function addEngineer() {
     inquirer.prompt([
       
@@ -111,6 +116,7 @@ function addEngineer() {
 
   }
 
+//prompts to collect required details about intern
   function addIntern() {
     inquirer.prompt([
       
@@ -146,6 +152,7 @@ function addEngineer() {
 
   }
 
+//writes answers into html template
 function htmlBuilder () {
     console.log("Team created!")
 
