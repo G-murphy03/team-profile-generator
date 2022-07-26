@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/G-murphy03/team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^9.0.2"
+    "inquirer": "^8.2.4"
   }
 }
